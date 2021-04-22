@@ -1,0 +1,17 @@
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYeabvL4eKrPgO5aVSKNNbV5QyBDeJsv-87auKsQoSbq9Jb3UR07bHsTQmBtoOEkFOuCY&usqp=CAU);
+    background-size:cover;
+}
+h1{
+    color:blue;
+    position: center;
+}
+h2{
+    color: crimson;
+}
+h3{
+    color: darkmagenta;
+}
+h5{
+    color: darkred;
+}
