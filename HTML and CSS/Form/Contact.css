@@ -3,16 +3,23 @@ body{
     background-size:cover;
 }
 h1{
-    color:blue;
+    color:rgba(63, 63, 236, 10);
     position: center;
     font-style: italic;
 }
 h2{
     color: crimson;
+    font-style: italic;
 }
 h3{
     color: darkmagenta;
+    font-style: italic;
+}
+h4{
+    color: rgb(240, 58, 73);
+    font-style: italic;
 }
 h5{
     color: darkred;
+    font-style: italic;
 }
