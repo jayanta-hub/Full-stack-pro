@@ -1,10 +1,11 @@
 body{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYeabvL4eKrPgO5aVSKNNbV5QyBDeJsv-87auKsQoSbq9Jb3UR07bHsTQmBtoOEkFOuCY&usqp=CAU);
+    background-image: url(https://st2.depositphotos.com/1079778/5589/v/950/depositphotos_55897403-stock-illustration-abstract-polygonal-background-vector.jpg);
     background-size:cover;
 }
 h1{
     color:blue;
     position: center;
+    font-style: italic;
 }
 h2{
     color: crimson;
