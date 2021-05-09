@@ -1,62 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #f2f2f2;
-    font-family: "segoe UI";
+body {
+  background-color: #f2f2f2;
+  font-family: "segoe UI";
 }
-h5{
-    margin: 15px;
-    font-size: 1.4em;
-    font-weight: 700;
+h5 {
+  margin: 15px;
+  font-size: 1.4em;
+  font-weight: 700;
 }
-p{
-    font-size: 13px;
+p {
+  font-size: 13px;
 }
-.center{
-    height: 100vh;
-    width: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.property-card:hover
-.property-image{
-    height: 18em;
+.property-card:hover .property-image {
+  height: 18em;
 }
-.property-card{
-    height: 18em;
-    width: 14em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 15px 15px 27px #f2f2f2, -15px -15px 27px #ffffff;
+.property-card {
+  height: 18em;
+  width: 14em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #f2f2f2, -15px -15px 27px #ffffff;
 }
-.property-image{
-    height: 30em;
-    width: 14em;
-    padding: 1em 2em;
-    /* position:absolute; */
-    top: 0px;
-    transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-image: url('https://assets-global.website-files.com/6005fac27a49a9cd477afb63/60576840e7d265198541a372_bavassano_homepage_gp.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+.property-image {
+  height: 30em;
+  width: 14em;
+  padding: 1em 2em;
+  /* position:absolute; */
+  top: 0px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image: url("https://ik.imagekit.io/ikmedia/backlit.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
 }
-.property-description{
-    background-color: #fafafc;
-    height: 12em;
-    width: 14em;
-    position: absolute;
-    bottom: 0em;
-    transition: ALL 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    padding: 0.5em 1em;
-    text-align: center;
+.property-description {
+  background-color: #fafafc;
+  height: 12em;
+  width: 14em;
+  position: absolute;
+  bottom: 0em;
+  transition: ALL 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: center;
 }
