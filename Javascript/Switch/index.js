@@ -1,4 +1,4 @@
-let day="Thusday";
+let day="Thusday || Tuesday";
 switch (day){
     case("Monday"):
     console.log("Today is Monday");
