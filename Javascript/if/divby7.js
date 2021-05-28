@@ -1,4 +1,4 @@
-let value=20;
+let value=21;
 // if(value % 7 == 0) {
 //     console.log("Number is divisible by 7");
 // }
