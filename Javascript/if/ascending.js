@@ -1,16 +1,43 @@
-let x = 13, y = 64 , z = 111 , ascd ,w;
-if (x < y && x < z){
-    w= x;
-}  
-else if (y < z){
-        console.log("Ascending number is " , w, y, z,".");
-        }
-else{
+let x = 134, y = 644, z = 111, l, m, s;
+if ((x > y) && (x > z)) {
+    l = x;
+}
 
-        console.log("Ascending number is ", z ,y , w ,".");
-    }
+else {if ((x < y) && (x > z) || (x>y) && (x <z)){ 
+    m = x;
+}
 
+if ((x < z) && (x < z)) {
+    s = x;
+}
+}
+if ((y > z) && (y > x)) {
+    l = y;
+}
 
+else {if ((y < z) && (y > x) || (y>z) && (y <x)){ 
+    m = y;
+}
+
+if ((y < z) && (y < x)) {
+    s = y;
+}
+}
+if ((z > x) && (z > y)) {
+    l = z;
+}
+
+else
+ {if ((z < x) && ( z > y) || (z>x) && (z <y)){ 
+    m = z;
+}
+
+if ((z < x) &&( z < y)) {
+    s = z;
+}
+ }
+
+console.log("Ascending number is ", s , m ,l, ".");
 // ascd = (x < y) ? (y < z ? x : z) : (y < z ? y : z);
 
 // console.log("Largest number among "
