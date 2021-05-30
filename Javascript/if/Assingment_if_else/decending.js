@@ -1,4 +1,9 @@
-let x = 134, y = 644, z = 111, l, m, s;
+let x = 134;
+let y = 644;
+let z = 111;
+let l;
+let m;
+let s;
 if ((x > y) && (x > z)) {
     l = x;
 }
