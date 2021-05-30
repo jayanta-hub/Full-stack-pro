@@ -1,4 +1,5 @@
-let x = 100 , y = 892 ;
+let x = 100;
+let y = 892 ;
 // if (x > y ){
 //     console.log(x, "is greater number than ", y );
 // }
