@@ -1,4 +1,7 @@
-let x = 121, y = 564 , z = 361 , max;
+let x = 121;
+let y = 564;
+let z = 361;
+let max;
 // if (x > y && x > z){
 //     console.log("Greatest number  is :" , x);
 // }  
