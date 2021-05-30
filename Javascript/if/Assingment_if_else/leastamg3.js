@@ -1,4 +1,7 @@
-let x = 121, y = 64 , z = 611 , min;
+let x = 121;
+let y = 64;
+let z = 611
+let min;
 // if (x < y && x < z){
 //     console.log("Least number among ", x, ", ", y, " and ", z, " is ", x, ".");
 // }  
