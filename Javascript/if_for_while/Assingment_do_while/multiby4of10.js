@@ -1,11 +1,9 @@
-
-// for (let i=0 , j=0; ; ){
-// if(i%4 == 0){
-//     j++;
-//     i=i+4;
-// }
-// elseif(j==10)
-//     break;
-//  console.log(i);
-// }
-
+let i=0;
+let j;
+while(i % 4 ==0){
+console.log(i);
+j<=10;
+break;
+i=i+4;
+j++;
+}
