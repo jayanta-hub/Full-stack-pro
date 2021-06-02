@@ -1,12 +1,15 @@
-let i=6;
-let j=1;
+// let i=6;
+// let j=1;
 
-while((i % 6 ==0) && (j<=10)){
+// while((i % 6 ==0) && (j<=10)){
+//     console.log(i);
+//     i=i+6;
+//     j++;
+// }
+
+for(i=6,j=1 ; ((i % 6 == 0)&&(j<=10)) ; (i=i+6, j++)){
     console.log(i);
-    i=i+6;
-    j++;
 }
-
 
 // do{
 //     console.log(i);
