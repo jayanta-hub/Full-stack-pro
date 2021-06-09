@@ -8,4 +8,4 @@ class address{
 }
 let add=new address(420,"jaleswar","Odisha",756035);
 console.log(add);
-Module.exports=address;
+module.exports = address;
