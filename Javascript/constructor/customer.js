@@ -1,5 +1,4 @@
-const address = require('./cstmr_address');
-class employee {
+class Employee {
     constructor(name, id, sal, position) {
         this.Name = name;
         this.id = id;
@@ -7,6 +6,7 @@ class employee {
         this.position = position;
     }
 }
-let emp = new employee(" Jayanta Garu", 101, 50000, "Full stack developer" );
+let emp = new Employee(" Jayanta Garu", 101, 50000, "Full stack developer" );
 console.log(emp);
-module.exports=employee;
+const Address = require('./cstmr_address');
+module.exports=Employee;
