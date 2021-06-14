@@ -1,5 +1,5 @@
-let employee = (a,b)=>{
-    return a+b;
+let employee = (a,b,c,d,)=>{
+    console.log(a, b, c,d);
 }
-let result=employee(100,200);
-console.log(result);
+   let emp=employee(101,"jayanta","odisha",50000);
+    console.log(emp);
