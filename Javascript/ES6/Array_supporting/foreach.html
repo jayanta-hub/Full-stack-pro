@@ -20,10 +20,10 @@
       { productName: "shirtFive", size: 44, price: 900 },
     ];
 
-    shirts.forEach(getProductName);
+    shirts.forEach(myfun);
     var result = "...";
-    function getProductName(value, index, array) {
-      result = +productName;
+    function myfun(value) {
+      result +=  value.productName;
     }
     // console.log(result, ".....");
     document.getElementById("abc").innerHTML = shirts;
