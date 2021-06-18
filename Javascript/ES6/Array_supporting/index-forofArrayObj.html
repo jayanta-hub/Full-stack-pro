@@ -19,14 +19,13 @@
       { productName: "shirtFour", size: 42, price: 1100 },
       { productName: "shirtFive", size: 44, price: 900 },
     ];
-
-    shirts.forEach(getProductName);
-    var result = "...";
-    function getProductName(value, index, array) {
-      result = +productName;
+    var total = 0;
+    for (const { price } of shirts) {
+      console.log(price);
+      total += price;
     }
-    // console.log(result, ".....");
+
     document.getElementById("abc").innerHTML = shirts;
-    document.getElementById("xyz").innerHTML = result;
+    document.getElementById("xyz").innerHTML = total;
   </script>
 </html>
