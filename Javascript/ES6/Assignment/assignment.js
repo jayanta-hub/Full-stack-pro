@@ -4,9 +4,10 @@ let employees = [
         gender: "Male",
         mobile: "8917293473",
         name: {
-        title: "Mr",
-        first: "Jayanta",
-        last: "Garu"}
+            title: "Mr",
+            first: "Jayanta",
+            last: "Garu"
+        }
 
     },
     {
@@ -14,20 +15,31 @@ let employees = [
         gender: "female",
         mobile: "7381462833",
         name: {
-        title: "Mrs",
-        first: "Tapaswani",
-        last: "Panda"
-    }
+            title: "Mrs",
+            first: "Tapaswani",
+            last: "Panda"
+        }
     },
     {
         No: 03,
         gender: "Male",
         mobile: "9861425882",
         name: {
-        title: "Mr",
-        first: "Prasanta",
-        last: "Das"
-        }
+            title: "Mr",
+            first: "Prasanta",
+            last: "Das"
+        },
+
+    },
+    {
+        No: 04,
+        gender: "female",
+        mobile: "9861546235",
+        name: {
+            title: "Miss",
+            first: "Yuna",
+            last: "Agricola"
+        },
     }
 ];
 
