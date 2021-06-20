@@ -7,7 +7,7 @@ let employees = [
     setTimeout(() => {
       employees.push(employee);
       callback();
-    }, 5000);
+    }, 1000);
   };
   let getEmployees = () => {
     setTimeout(() => {
