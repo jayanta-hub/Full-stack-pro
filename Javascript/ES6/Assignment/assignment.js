@@ -39,14 +39,75 @@ let employees = [
             title: "Miss",
             first: "Yuna",
             last: "Agricola"
-        },
+        }
+
+    },
+    {
+        No: 05,
+        gender: "male",
+        mobile: "9886955324",
+        name: {
+            title: "Mr",
+            first: "Victor",
+            last: "Ginnish"
+        }
+    },
+    {
+        No: 06,
+        mobile: "8963152478",
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Klaus-D.",
+            last: "Pieper"
+        }
+    },
+    {
+        No: 07,
+        mobile: "896315127",
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Jorge",
+            last: "Frazier"
+        }
+    },
+    {
+        No: 08,
+        mobile: "986115127",
+        gender: "male",
+        name: {
+            title: "Mr",
+            first: "Murat",
+            last: "Bademci"
+        }
+    },
+    {
+        No: 09,
+        mobile: "796115127",
+        gender: "male",
+        name: {
+        title: "Mr",
+        first: "Nathaniel",
+        last: "Edwards"
+        }
+    },
+    {
+        No: 10,
+        mobile: "9937564825",
+        gender: "male",
+        name: {
+        title: "Mr",
+        first: "Carl",
+        last: "Mortensen"
     }
+},
 ];
 
 let createNewEmployee = (employee) => {
     setTimeout(() => {
         employees.push(employee);
-    }, 000);
+    }, 1000);
 };
 let getEmployees = () => {
     setTimeout(() => {
@@ -61,6 +122,6 @@ let getEmployees = () => {
             <td> ${employee.mobile}</td></tr>`;
         });
         document.querySelector("#table-body").innerHTML = employeeRows;
-    }, 000);
+    }, 1000);
 };
 getEmployees();
