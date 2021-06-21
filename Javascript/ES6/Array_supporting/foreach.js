@@ -7,7 +7,7 @@ let shirts = [
   ];
   let result = "";
   shirts.forEach((value, index) => {
-    console.log(value.productName);
+    // console.log(value.productName);
     let { productName } = value;
     result += productName + " ....   ";
   });

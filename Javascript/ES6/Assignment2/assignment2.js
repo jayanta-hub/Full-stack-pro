@@ -101,12 +101,6 @@ let employees = [
 
 
 ];
-
-let createNewEmployee = (employee) => {
-    setTimeout(() => {
-        employees.push(employee);
-    }, 000);
-};
 let getEmployees = () => {
     setTimeout(() => {
         let employeeRows = "";
@@ -122,7 +116,7 @@ let getEmployees = () => {
             <td> ${employee.timezone.description}</td>
             </tr>`;
         });
-        document.querySelector("#table-body").innerHTML = employeeRows;
+        document.getElementById("table-body").innerHTML = employeeRows;
     }, 000);
 };
 getEmployees();
