@@ -1,8 +1,8 @@
-import CompA from "./components/CompA"
+import CA from "./components/Class-Class/CA"
 function App() {
   return (
     <div >
-      <CompA/>
+  <CA/>
     </div>
   );
 }
