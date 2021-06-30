@@ -1,8 +1,11 @@
-import CA from "./components/Class-Class/CA"
+import "./assets/bootstrap.css"
+// import CB from "./components/Class-Class/CB.jsx"
+import Product from "./components/Product/Product.jsx"
 function App() {
   return (
     <div >
-  <CA/>
+      {/* <CB/> */}
+      <Product/>
     </div>
   );
 }
