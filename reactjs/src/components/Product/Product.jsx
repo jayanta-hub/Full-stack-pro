@@ -7,7 +7,7 @@ class Product extends React.Component {
     }
   };
   change_product_name = () => {
-    this.setState({...this.state.product}, { Dog_Name: "German" });
+    this.setState({product: { Dog_Name: "German" , Price:"50000"}});
   };
   render() {
     return (
