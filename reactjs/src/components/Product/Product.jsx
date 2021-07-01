@@ -7,7 +7,7 @@ class Product extends React.Component {
     }
   };
   change_product_name = () => {
-    this.setState({ product: { Dog_Name: "German" } });
+    this.setState({...this.state.product}, { Dog_Name: "German" });
   };
   render() {
     return (
@@ -17,6 +17,7 @@ class Product extends React.Component {
             <div className="col-md-6">
               <div className="card">
                 <div className="card-header">
+                  <pre>{JSON.stringify(this.state.product)}</pre>
                   <h4>Price:{this.state.product.Price}</h4>
                   <div className="card-body">
                     <h5>Dog Name: {this.state.product.Dog_Name}</h5>
