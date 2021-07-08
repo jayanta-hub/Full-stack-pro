@@ -1,14 +1,14 @@
 import React from "react";
 class Product extends React.Component {
-  state =[
-      "Dog_Name: German Shepherd",
-      "Price:50000",
+  state ={
+      Dog_Name: "German Shepherd",
+      Price:"50000",
       
-    ];
+  };
   change_product_name = () => {
-    this.setState([
-      ...this.state,[1]="Dog_Name: German"
-    ]);
+    this.setState(
+      ...this.state
+    );
   };
   render() {
     return (

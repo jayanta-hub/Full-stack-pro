@@ -1,11 +1,13 @@
 import "./assets/bootstrap.css"
-// import CB from "./components/Class-Class/CB.jsx"
-import Product1 from "./components/Product/Product1.jsx"
+import Login from "./FormHandling/Login/Login.jsx"
+import Registration from "./FormHandling/Registration/regi.jsx"
+import Singin from "./FormHandling/Singin/Singin.jsx"
 function App() {
   return (
     <div >
-      {/* <CB/> */}
-      <Product1/>
+      <Login/>
+      <Registration/>
+      <Singin/>
     </div>
   );
 }
