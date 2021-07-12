@@ -15,7 +15,7 @@ class Registration extends Component {
     this.setState({ mobile: event.target.value });
   };
   regHandler = (event) => {
-    console.log(this.state);
+    alert(JSON.stringify(this.state))
     event.preventDefault();
   };
   render() {

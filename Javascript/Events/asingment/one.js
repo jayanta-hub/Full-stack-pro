@@ -1,5 +1,5 @@
 function mouseOver() {
-    document.getElementById("onmouseove").style.background = "red";
+    document.getElementById("onmouseover").style.background = "red";
     }
 
   function mouseOut() {
