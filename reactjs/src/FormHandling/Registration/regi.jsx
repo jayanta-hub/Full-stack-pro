@@ -29,13 +29,13 @@ class Registration extends Component {
             type="password"
             placeholder="password"
             onChange={this.passwordHanlder}
-          />{" "}
+          />
           <br />
           <input
             type="text"
             placeholder="Mobile"
             onChange={this.mobileHanlder}
-          />{" "}
+          />
           <br />
           <input type="submit" /> <br />
         </form>
