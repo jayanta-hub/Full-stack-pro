@@ -10,7 +10,7 @@ class ContactApp extends React.Component {
   }
   componentDidMount() {
     let dataURL =
-      "https://jsonplaceholder.typicode.com/posts";
+      "https://api.agify.io/?name=ram";
 
     Axios.get(dataURL)
       .then((response) => {
@@ -31,32 +31,28 @@ class ContactApp extends React.Component {
     return (
       <>
         <h1>Contact App</h1>
-        <pre>{JSON.stringify(this.state.contacts[0])}</pre>
+        <pre>{JSON.stringify(this.state.contacts)}</pre>
         <div className="container mt-4">
           <div className="row">
             <div className="col-md-10">
               <table className="table table-hover">
                 <thead>
                   <tr>
-                    <th>id</th>
-                    <th>title</th>
-                    <th>body</th>
+                    <th>Name</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.contacts.length > 0 ? (
+                  {this.state.contacts.length > 0 ?
                     <React.Fragment>
                       {this.state.contacts.map((contact) => {
                         return (
-                          <tr key={this.contacts}>
-                            <td>{contact.id}</td>
-                            <td>{contact.title}</td>
-                            <td>{contact.body}</td>
+                          <tr key={contact.mail} >
+                            <td>{contact.name}</td>
                           </tr>
                         );
                       })}
                     </React.Fragment>
-                  ) : null}
+                    : null}
                 </tbody>
               </table>
             </div>
