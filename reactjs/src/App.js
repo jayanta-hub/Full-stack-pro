@@ -7,7 +7,7 @@ import DigitalClock from "./Hooks/DigitalClock/DigitalClock.jsx";
 let App = () => {
   return (
     <>
-      <Router>
+      <Router>  
         <Navbar />
         <Switch>
           <Route exact path="/digital" component={DigitalClock} />
