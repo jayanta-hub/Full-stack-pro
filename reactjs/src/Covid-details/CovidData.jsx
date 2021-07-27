@@ -10,7 +10,7 @@ class ContactApp extends React.Component {
   }
   componentDidMount() {
     let dataURL =
-      "https://api.agify.io/?name=ram";
+      "https://api.covidtracking.com/v1/us/daily.json";
 
     Axios.get(dataURL)
       .then((response) => {
@@ -34,11 +34,12 @@ class ContactApp extends React.Component {
         <pre>{JSON.stringify(this.state.contacts)}</pre>
         <div className="container mt-4">
           <div className="row">
-            <div className="col-md-10">
+            <div className="col-md-12">
               <table className="table table-hover">
                 <thead>
                   <tr>
-                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Positive</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -47,7 +48,8 @@ class ContactApp extends React.Component {
                       {this.state.contacts.map((contact) => {
                         return (
                           <tr key={contact.mail} >
-                            <td>{contact.name}</td>
+                            <td>{contact.date}</td>
+                            <td>{contact.positive}</td>
                           </tr>
                         );
                       })}

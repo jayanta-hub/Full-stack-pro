@@ -24,23 +24,23 @@ let ContactApp = () => {
           <div className="col-md-8">
             <table class="table">
               <thead class="thead-dark">
-                <tr>
+                <tr className="text-center">
+                <th>Picture</th>
                   <th>Name</th>
                   <th>Email</th>
                   <th>City</th>
-                  <th>Picture</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="text-center">
                 {contact.contacts.length > 0 ? (
                   <React.Fragment>
                     {contact.contacts.map((contact) => {
                       return (
                         <tr key={contact.email}>
+                        <td><img src={contact.picture.thumbnail} alt="vds"/></td>
                           <td>{contact.name.first}</td>
                           <td>{contact.email}</td>
                           <td>{contact.location.city}</td>
-                          <td><img src={contact.picture.thumbnail} alt="vds"/></td>
                         </tr>
                       );
                     })}
