@@ -25,6 +25,11 @@ class Navbar extends React.Component {
                Contact
                 </Link>
               </li>
+              <li className="nav-item">
+              <Link to="/message" className="nav-link">
+             Message
+              </Link>
+            </li>
             </ul>
           </div>
         </nav>
