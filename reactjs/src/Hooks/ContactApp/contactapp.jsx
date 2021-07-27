@@ -28,6 +28,7 @@ let ContactApp = () => {
                   <th>Name</th>
                   <th>Email</th>
                   <th>City</th>
+                  <th>Picture</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,6 +40,7 @@ let ContactApp = () => {
                           <td>{contact.name.first}</td>
                           <td>{contact.email}</td>
                           <td>{contact.location.city}</td>
+                          <td><img src={contact.picture.thumbnail} alt="vds"/></td>
                         </tr>
                       );
                     })}
@@ -48,11 +50,19 @@ let ContactApp = () => {
             </table>
           </div>
           <div className="col-md-4">
-            {/*   {Object.keys(contact.selectedContact).length > 0 ? (
-              <>
-                <ContactCard contact={contact.selectedContact} />
-              </>
-            ) : null} */}
+            {/* contact.contacts.length > 0 ? (
+            <React.Fragment>
+              {contact.contacts.map((contact) => {
+                return (
+                  <tr key={contact.email}>
+                    <td>{contact.name.first}</td>
+                    <td>{contact.email}</td>
+                    <td>{contact.location.city}</td>
+                  </tr>
+                );
+              })}
+            </React.Fragment>
+          ) : null */}
           </div>
         </div>
       </div>
