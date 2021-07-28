@@ -10,8 +10,7 @@ class CovidData extends React.Component {
     }
   }
   componentDidMount() {
-    // const EmpURL = "https://gist.githubusercontent.com/narasimhareddyprostack/7e344f346f47bc53a889d78b5258d0c9/raw/56d531cb936d9c79e2417e5d0e5d8c9c876800f2/contactlist";
-    const DataURL = "https://api.covid19india.org/data.json";
+  const DataURL = "https://api.covid19india.org/data.json";
     Axios.get(DataURL)
       .then((response) => {
         this.setState({ contactList: response.data })
@@ -27,7 +26,7 @@ class CovidData extends React.Component {
         <table className="table">
           <thead className="thead-dark">
             <tr>
-              <th scope="col">Id</th>
+              <th scope="col">Date</th>
               <th scope="col">Employee Name</th>
               <th scope="col">Image</th>
               <th scope="col">Employee Age</th>
@@ -43,7 +42,7 @@ class CovidData extends React.Component {
                     return (
 
                        <tr key="covid.mail">
-                           <td></td>
+                           <td>{covid.cases_time_series.date}</td>
                        </tr>
 
                     )   
