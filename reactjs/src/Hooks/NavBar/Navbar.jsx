@@ -30,6 +30,11 @@ class Navbar extends React.Component {
              Message
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/covid" className="nav-link">
+             Covid Data
+              </Link>
+            </li>
             </ul>
           </div>
         </nav>

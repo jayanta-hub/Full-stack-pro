@@ -5,9 +5,9 @@ import Navbar from "./Hooks/NavBar/Navbar.jsx";
 import ContactApp from "./Hooks/ContactApp/contactapp.jsx";
 import DigitalClock from "./Hooks/DigitalClock/DigitalClock.jsx";
 import Message from "./Message/message.jsx"
+import CovidData from "./Covid-details/CovidData.jsx";
 import { Provider } from "react-redux";
 import { store } from "./Redux/Store";
-import CovidData from "./Covid-details/CovidData.jsx"
 let App = () => {
   return (
     <>
@@ -21,8 +21,8 @@ let App = () => {
           <Route exact path="/message" component={Message} />
         </Switch>
       </Router>
-      <CovidData/>
       </Provider>
+      <CovidData/>
     </>
   );
 };
