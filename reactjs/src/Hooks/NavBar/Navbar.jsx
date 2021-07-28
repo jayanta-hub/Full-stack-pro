@@ -35,6 +35,11 @@ class Navbar extends React.Component {
              Covid Data
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/react-useref-hook" className="nav-link">
+              react-useref-hook
+              </Link>
+            </li>
             </ul>
           </div>
         </nav>
