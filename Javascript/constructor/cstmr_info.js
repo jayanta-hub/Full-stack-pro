@@ -7,5 +7,6 @@ class Info{
     
   }  
 }
+
 let details=new Info("jayanta.garu@gmail.com", 8917293473,7381462833);
 console.log(details);
