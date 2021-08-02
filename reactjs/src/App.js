@@ -1,14 +1,11 @@
-import React from "react";
-
-import Tracker from "./Tracker/Tracker.jsx";
-let App = () => {
+import React from 'react'
+import Tracker from './Tracker/Tracker.jsx'
+function App() {
   return (
-    <>
-      
-        <Tracker />
-     
-    </>
-  );
-};
+    <div>
+      <Tracker/>
+    </div>
+  )
+}
 
-export default App;
+export default App

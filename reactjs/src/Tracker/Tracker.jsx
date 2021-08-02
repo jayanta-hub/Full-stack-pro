@@ -4,34 +4,41 @@ class Tracker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      balance: 100,
-      updated: 0
-    }
-
+      balance: 0,
+      updated: 0,
+      date:""
+    };
+  };
+  componentDidMount() {
+    this.getDate();
   }
 
-  changHandler = (event) => {
-    this.setState({
-      updated: [event.target.value]
-
-    });
-    console.log(this.state.updated);
+  getDate = () => {
+    var date = new Date().toDateString();
+    this.setState({ date });
   };
-  addHandler = () => {
+ changeHandler= (event) => {
     this.setState({
-      balance: this.state.balance + this.state.updated
+      updated: event.target.valueAsNumber
+
+    })
+  };
+ addHandler = () => {
+  
+    this.setState({
+      balance: (this.state.balance + this.state.updated)
     });
   };
-  removeHandler = () => {
+ removeHandler = () => {
     this.setState({
-      balance: this.state.balance - this.state.updated
-
+      balance: (this.state.balance - this.state.updated)
     });
   };
   render() {
+    const { date } = this.state;
     return (
 
-      <div className="container mt-4 md-12 margin-left: auto margin-right: auto">
+      <div className="container  md-12  align-items-center">
         <div className="row">
           <div className="col-md-5">
           <div><h1>Expense Tracker - Basic</h1></div>
@@ -39,17 +46,14 @@ class Tracker extends React.Component {
               <div className="row">
                 <div className="col-md-8">
                   <div className="card">
-                    <div className="card-header">Balance:</div>
+                    <div className="card-header">Balance:  {this.state.balance}</div>
                     <div className="card-body">
-                    <label><h3 >Balance:{this.state.balance}</h3></label>
-              <pre>{JSON.stringify(this.state.balance)}</pre>
-              <pre>{JSON.stringify(this.state.updated)}</pre>
-
-              <input type="text" placeholder="Enter Amount" onChange={this.changHandler}/>
+              <input type="number" placeholder="Enter Amount" onChange={this.changeHandler}/>
               <br/>
-              <button className="btn btn-success" onClick={this.addHandler}><h3>Add</h3></button>
               <br/>
-              <button className="btn btn-primary" onClick={this.removeHandler}><h3>Remove</h3></button>
+              <button type="button" className="btn btn-success mr-2 btn-sm" onClick={this.addHandler}><h3>Add</h3></button>
+            
+              <button type="button" className="btn btn-primary btn-sm" onClick={this.removeHandler}><h3>Remove</h3></button>
             </div></div>
                   </div>
                 </div>
@@ -60,7 +64,7 @@ class Tracker extends React.Component {
               <div className="col-md-4">
                 <div className="card">
                   <div className="card-header">Transaction:</div>
-                  <div className="card-body"></div>
+                  <div className="card-body"> {date} - {this.state.updated}</div>
                 </div>
               </div>
             </div>
@@ -69,6 +73,7 @@ class Tracker extends React.Component {
         </div>
     )
   }
-}
+};
+
 
 export default Tracker;
