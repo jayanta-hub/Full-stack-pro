@@ -13,7 +13,10 @@ let App = () => {
     const addValue = () => {
         setBalance(`${parseInt(balance) + parseInt(value)}`)
         
-        setTransaction(Transaction => ([...Transaction, `${new Date().toLocaleTimeString()} ${value} add`]));
+        setTransaction(
+            Transaction => 
+            ([...Transaction, `${new Date().toLocaleTimeString()} ${value} add`])
+            );
     }
 
     const removeValue = () => {
@@ -22,9 +25,7 @@ let App = () => {
     }
     return (
         <div>
-{/* <pre>{JSON.stringify(balance)}</pre>
-
-    <pre>{JSON.stringify(Transaction)}</pre> */}
+    <pre>{JSON.stringify(Transaction)}</pre> 
     <h1>Balance : {balance}</h1>
             <input type="number" placeholder="Enter money to add or remove " onChange={onChangeHandler} ></input>
             <button type="button" onClick={addValue} >Add</button>
@@ -35,10 +36,10 @@ let App = () => {
                  
                 {
                   Transaction.map((trans)=>{
-                    return <li> { trans}</li>
+                    return <li key={trans.Transaction}> { trans}</li>
                   })
                 }
-               {/*  <h3>Transactions:{Transaction}</h3> */}
+              
                 </ul>
             </div>
 

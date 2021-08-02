@@ -4,8 +4,8 @@ class Tracker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currbalance: [550],
-      updated: [0],
+      currbalance: 0,
+      updated: 0,
       date: []
     };
   };
@@ -14,7 +14,7 @@ class Tracker extends React.Component {
   }
 
   getDate = () => {
-    var date = new Date().toLocaleTimeString();
+    var date = new Date().toDateString();
     this.setState({ date });
   };
   changeHandler = (event) => {
@@ -27,34 +27,36 @@ class Tracker extends React.Component {
 
     this.setState({
       currbalance: (this.state.currbalance + this.state.updated),
-      date: [this.state.date + "-" + this.state.updated + "- Add"]
+      date: [...this.state.date,(this.state.date + "-" + this.state.updated + "- Add")]
     });
   };
   removeHandler = () => {
     this.setState({
       currbalance: (this.state.currbalance - this.state.updated),
-      date: [...this.state.date, this.state.date + "-" + this.state.updated + "- Removed"]
+      date: this.state.date + "-" + this.state.updated + "- Removed"
     });
   };
   render() {
-    const date1 = this.state
+
     return (
 
       <div className="container  md-12  align-items-center">
         <div className="row">
           <div className="col-md-5">
+          <pre>{JSON.stringify(this.state.date)}</pre>
+
             <div><h1>Expense Tracker - Basic</h1></div>
             <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
               <div className="row">
                 <div className="col-md-8">
                   <div className="card">
+
                     <div className="card-header">Balance:  {this.state.currbalance}</div>
                     <div className="card-body">
                       <input type="number" placeholder="Enter Amount" onChange={this.changeHandler} />
                       <br />
                       <br />
                       <button type="button" className="btn btn-success mr-2 btn-sm" onClick={this.addHandler}><h3>Add</h3></button>
-                      <pre>{JSON.stringify(this.state.arr)}</pre>
                       <button type="button" className="btn btn-primary btn-sm" onClick={this.removeHandler}><h3>Remove</h3></button>
                     </div></div>
                 </div>
@@ -67,9 +69,8 @@ class Tracker extends React.Component {
                 <div className="card">
                   <div className="card-header">Transaction:</div>
                   <div className="card-body" >
-                    <pre>{JSON.stringify(date1)}</pre>
                     <ul>
-                      <li> {date1.date}</li>
+                      <li>{this.state.date}</li>
                     </ul>
                   </div>
                 </div>
