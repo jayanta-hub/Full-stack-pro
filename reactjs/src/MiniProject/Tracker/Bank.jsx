@@ -15,13 +15,13 @@ let App = () => {
         
         setTransaction(
             Transaction => 
-            ([...Transaction, `${new Date().toLocaleTimeString()} ${value} add`])
+            ([...Transaction,  `${new Date().toLocaleTimeString()}  ${value} add`])
             );
     }
 
     const removeValue = () => {
         setBalance(balance - value)
-        setTransaction(Transaction => ([...Transaction, `${new Date().toLocaleTimeString()} ${value} remove`]));
+        setTransaction(Transaction => ([...Transaction, "-" `${new Date().toLocaleTimeString()} ${value} remove`]));
     }
     return (
         <div>

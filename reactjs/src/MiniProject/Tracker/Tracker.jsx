@@ -6,7 +6,8 @@ class Tracker extends React.Component {
     this.state = {
       currbalance: 0,
       updated: 0,
-      date: []
+      date: "",
+      arr:[]
     };
   };
   componentDidMount() {
@@ -27,30 +28,27 @@ class Tracker extends React.Component {
 
     this.setState({
       currbalance: (this.state.currbalance + this.state.updated),
-      date: [...this.state.date,(this.state.date + "-" + this.state.updated + "- Add")]
+      arr: [...this.state.arr, this.state.date  + "-" + this.state.updated + "- Added"]
     });
   };
-  removeHandler = () => {
+  removeHandler = () => {   
     this.setState({
       currbalance: (this.state.currbalance - this.state.updated),
-      date: this.state.date + "-" + this.state.updated + "- Removed"
+      arr: [...this.state.arr, this.state.date  + "-" + this.state.updated + "- Removed"]
     });
   };
   render() {
 
     return (
 
-      <div className="container  md-12  align-items-center">
+      <div className="container  md-12  ">
         <div className="row">
           <div className="col-md-5">
-          <pre>{JSON.stringify(this.state.date)}</pre>
-
-            <div><h1>Expense Tracker - Basic</h1></div>
-            <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
+            <div ><h1 >Expense Tracker - Basic</h1></div>
+            <div className="container md-6  ">
               <div className="row">
                 <div className="col-md-8">
                   <div className="card">
-
                     <div className="card-header">Balance:  {this.state.currbalance}</div>
                     <div className="card-body">
                       <input type="number" placeholder="Enter Amount" onChange={this.changeHandler} />
@@ -63,14 +61,16 @@ class Tracker extends React.Component {
               </div>
             </div>
           </div>
-          <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
+          <div className="container md-6 mt-5">
             <div className="row">
               <div className="col-md-4">
                 <div className="card">
                   <div className="card-header">Transaction:</div>
                   <div className="card-body" >
-                    <ul>
-                      <li>{this.state.date}</li>
+                    <ul>{this.state.currbalance === 0?null:<li>{this.state.arr.map((trans)=>{
+                      return <li key={trans.date}> { trans}</li>
+                    })}</li>}
+                      
                     </ul>
                   </div>
                 </div>

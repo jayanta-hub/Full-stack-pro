@@ -1,5 +1,5 @@
 import React from 'react'
-import Tracker from './Tracker/Tracker.jsx'
+import Tracker from './MiniProject/Tracker/Tracker.jsx'
 // import Bank from "./Tracker/Bank.jsx"
 // import Transaction from "./Tracker/Transaction.jsx"
 
