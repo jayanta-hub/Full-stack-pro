@@ -1,3 +1,5 @@
-var x= [22,55,67,89];
+var x= ["the","good","morning"];
 
-console.log(x);
+let z= x.map((y)=>y.length)
+console.log(z);
+console.log(x[0].length);
