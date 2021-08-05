@@ -1,9 +1,9 @@
 import React from 'react'
-import CompA from "./components/Func-Func/CompA.jsx"
+import Balance from "./MiniProject/Transaction/Balance.jsx"
 let App = () => {
     return (
       <>
-     <CompA/>
+     <Balance/>
       </>
     );
   };
