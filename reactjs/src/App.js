@@ -1,9 +1,9 @@
 import React from 'react'
-import Balance from "./MiniProject/Transaction/Balance.jsx"
+import Event from "./Practise/Binding/function/Event2.jsx"
 let App = () => {
     return (
       <>
-     <Balance/>
+     <Event/>
       </>
     );
   };
