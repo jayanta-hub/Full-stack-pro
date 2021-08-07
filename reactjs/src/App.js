@@ -1,9 +1,9 @@
 import React from 'react'
-import Event from "./Practise/Binding/function/Event2.jsx"
+import Sms from "./Practise/Remaining-character/Function/Sms.jsx"
 let App = () => {
     return (
       <>
-     <Event/>
+     <Sms/>
       </>
     );
   };
