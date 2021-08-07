@@ -1,9 +1,9 @@
 import React from 'react'
-import Sms from "./Practise/Remaining-character/Function/Sms.jsx"
+import ShowPassword from "./Practise/Show-Password/Class/Showpassword.jsx"
 let App = () => {
     return (
       <>
-     <Sms/>
+     <ShowPassword/>
       </>
     );
   };
