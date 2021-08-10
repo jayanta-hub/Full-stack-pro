@@ -1,5 +1,5 @@
 import React from 'react'
-import ShowPassword from "./Practise/Show-Password/Class/Showpassword.jsx"
+import ShowPassword from "./Practise/Show-Password/Function/Showpassword.jsx"
 let App = () => {
     return (
       <>

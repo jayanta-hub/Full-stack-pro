@@ -2,12 +2,16 @@ import React, { Component } from "react";
 
 class ShowPassword extends Component {
   state = {
-    inputType: "password",
+    inputType: "password"
   };
-  changeHanlder = () => {
-    this.setState({ inputType: "text" });
-  };
-  render() {
+  changeHanlder = (event) => {
+    (event.target.checked === true )?
+      this.setState({inputType:'text'})
+    :
+      this.setState({inputType:'password'})
+console.log(this.state.inputType)    
+    };
+  render() {  
     return (
       <div>
         <div className="container mt-4">
@@ -22,6 +26,7 @@ class ShowPassword extends Component {
                     <div className="input-group mb-3">
                       <div className="input-group-prepend">
                         <div className="input-group-text">
+
                           <input
                             type="checkbox"
                             aria-label="Checkbox for following text input"
