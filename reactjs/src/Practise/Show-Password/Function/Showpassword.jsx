@@ -48,6 +48,6 @@ const Showpassword = () => {
     </div>
     </>
   )
-}
+};
 
-export default Showpassword
+export default Showpassword;

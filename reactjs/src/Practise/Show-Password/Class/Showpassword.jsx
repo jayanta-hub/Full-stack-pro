@@ -50,6 +50,6 @@ console.log(this.state.inputType)
       </div>
     );
   }
-}
+};
 
 export default ShowPassword;
