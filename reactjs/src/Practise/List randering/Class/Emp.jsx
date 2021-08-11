@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmployeeData from "../assets/EmploeeData/EmployeeData";
+import EmployeeData from "../.././../assets/EmploeeData/EmployeeData";
 class Employee extends Component {
   //initilize component data
   constructor(props) {
@@ -7,9 +7,6 @@ class Employee extends Component {
     this.state = {
       employees: EmployeeData,
     };
-  };  
-  updateHander =(event)=>{
-      this.setState={[event.target.id]: event.target.value}
   }
   render() {
     // let { employees } = this.state.employees;
@@ -34,11 +31,11 @@ class Employee extends Component {
                   {this.state.employees.map((employee) => {
                     return (
                       <tr key={employee.email}>
-                        <td>{employee.login.uuid.substring(32, 36)} </td>
+                        <td>{employee.login.uuid.substring(32, 36)}</td>
                         <td>
-                          <img src={employee.picture.thumbnail} alt="" onMouseOver={this.updateHander}/>
+                          <img src={employee.picture.thumbnail} alt="text" />
                         </td>
-                        <td>{employee.name.first} </td>
+                        <td>{employee.name.first}</td>
                         <td>{employee.location.city}</td>
                         <td>{employee.email}</td>
                         <td>{employee.dob.age}</td>

@@ -1,20 +1,9 @@
-import React, { Component } from "react";
-import EmployeeData from "../assets/EmploeeData/EmployeeData";
-class Employee extends Component {
-  //initilize component data
-  constructor(props) {
-    super(props);
-    this.state = {
-      employees: EmployeeData,
-    };
-  };  
-  updateHander =(event)=>{
-      this.setState={[event.target.id]: event.target.value}
-  }
-  render() {
-    // let { employees } = this.state.employees;
-    return (
-      <React.Fragment>
+import React from "react";
+import EmployeeData from "../../../assets/EmploeeData/EmployeeData"
+let Emp=()=>{
+    let employees=EmployeeData;
+    return(
+        <React.Fragment>
         {/*  <pre>{JSON.stringify(this.state.employees[0])}</pre> */}
         <div className="container mt-4">
           <div className="row">
@@ -31,14 +20,14 @@ class Employee extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.employees.map((employee) => {
+                  {employees.map((employee) => {
                     return (
                       <tr key={employee.email}>
-                        <td>{employee.login.uuid.substring(32, 36)} </td>
+                        <td>{employee.login.uuid.substring(32, 36)}</td>
                         <td>
-                          <img src={employee.picture.thumbnail} alt="" onMouseOver={this.updateHander}/>
+                          <img src={employee.picture.thumbnail} alt="text" />
                         </td>
-                        <td>{employee.name.first} </td>
+                        <td>{employee.name.first}</td>
                         <td>{employee.location.city}</td>
                         <td>{employee.email}</td>
                         <td>{employee.dob.age}</td>
@@ -51,8 +40,6 @@ class Employee extends Component {
           </div>
         </div>
       </React.Fragment>
-    );
-  }
-}
-
-export default Employee;
+    )
+};
+export default Emp;
