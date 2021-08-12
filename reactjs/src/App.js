@@ -5,9 +5,8 @@ import Navbar from "./Hooks/NavBar/Navbar.jsx";
 import ContactApp from "./Hooks/ContactApp/contactapp.jsx";
 import DigitalClock from "./Hooks/DigitalClock/DigitalClock.jsx";
 import Message from "./Message/message.jsx"
+import Balance from "./MiniProject/Transaction/Balance.jsx"
 import hook from "./Hooks/react-useref-hook/hook.jsx"
-import Emp from "./Practise/List randering/Function/Emp.jsx";
-import Profile from "./Practise/Condition rendering/function/Profile.jsx"
 import { Provider } from "react-redux";
 import { store } from "./Redux/Store";
 let App = () => {
@@ -23,10 +22,8 @@ let App = () => {
           <Route exact path="/message" component={Message} />
           <Route exact path="/hook" component={hook} />
         </Switch>
-      <Emp/>
-      <Profile/>
+       <Balance/> 
       </Router>
-
       </Provider>
     </>
   );

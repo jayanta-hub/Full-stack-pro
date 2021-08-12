@@ -29,7 +29,7 @@ let App = () => {
     <div className="container  md-12  align-items-center">
         <div className="row">
           <div className="col-md-5">
-            <div><h1>Expense Tracker - Basic</h1></div>
+            <div><h1>Account Statement - Basic</h1></div>
             <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
               <div className="row">
                 <div className="col-md-8">

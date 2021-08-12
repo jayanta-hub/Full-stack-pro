@@ -18,7 +18,7 @@ let Message = ()=>{
   <div className="row">
     <div className="col-md-6">
       <div className="card">
-        <div className="card-header"><h4>Message:{messageData.message}</h4></div>
+        <div className="card-header"><h4>Message:{messageData.Message}</h4></div>
         <pre>{JSON.stringify(messageData)}</pre>
         <div className="card-body">
             <button type="button" className="btn btn-primary mr-3" onClick={gmHandler}>  Good Morning</button>
