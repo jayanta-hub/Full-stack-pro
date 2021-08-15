@@ -1,29 +1,78 @@
-import React from "react";
+import React, { useState } from 'react'
 
-class Transaction extends React.Component{
-render(){
-    return (
-        <div className="container-fluid md-5 ml-5 mt-4 mb-5 bg-dark " data-spy="scroll" data-offset="50">
+let Transaction = () => {
+  let [balance, setBalance] = useState(0);
+  let [value, setValue] = useState(Number);
+  let [Transaction, setTransaction] = useState([]);
+
+  let onChangeHandler = (event) => {
+    setValue(event.target.valueAsNumber)
+    event.preventDefault();
+  }
+
+  let addValue = () => {
+    setBalance(balance + value);
+    setTransaction(
+      (value !== 0) ? [new Date().toLocaleTimeString() + "   :    " + value + "    :-   Added", ...Transaction]
+        : (alert("Invalid Amount Entered"), [...Transaction])
+
+    )
+  };
+
+  let removeValue = () => {
+    (balance < value) ? alert('CurrentBalance is Low') :
+    (setBalance(balance - value));
+
+      setTransaction((value !==0 && balance!==0)?[new Date().toLocaleTimeString() + "    :    " + value + "    :-     removed", ...Transaction]
+        : (alert("Invalid Amount Entered"), [...Transaction]))
+        
+  };
+  return (
+    <div>
+      <pre>{JSON.stringify(balance)}</pre>
+      <div className="container  md-12  align-items-center">
         <div className="row">
-          <div className="col-md-8 ml-5 mt-4 mb-4 ">
-            <div className="card">
-              <div className="card-header">Transaction:</div>
-              <div className="card-body"  >
-                <ul>
-                {this.props.check ===0 ? null : 
-                    <li>{this.props.statment.map((trans) => {
-                  return <li key={trans.date}> {trans}</li>
-                })}</li>}
+          <div className="col-md-5">
+            <div><h1>Account Statement - Basic</h1></div>
+            <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="card">
+                    <div className="card-header">Balance:  {balance}</div>
+                    <div className="card-body">
+                      <input type="number" placeholder="Enter Amount" onChange={onChangeHandler} />
+                      <br />
+                      <br />
+                      <button type="button" className="btn btn-success mr-2 btn-sm" onClick={addValue}><h3>Add</h3></button>
+                      <button type="button" className="btn btn-primary btn-sm" onClick={removeValue}><h3>Remove</h3></button>
+                    </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-header">Transaction:</div>
+                  <div className="card-body" >
 
-                </ul>
+                    {<ul>
+                      {
+                        Transaction.map((trans) => {
+                          return <li key={trans.Transaction}> {trans}</li>
+                        })
+                      }
+
+                    </ul>}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
-
-    }
-
-
-}export default Transaction;
+    </div>
+  )
+};
+export default Transaction;

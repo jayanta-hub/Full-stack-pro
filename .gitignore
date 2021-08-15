@@ -342,3 +342,5 @@ node_modules/mdb-ui-kit/src/scss/free/mixins/_buttons.scss
 node_modules/mdb-ui-kit/src/scss/free/mixins/_ripple.scss
 node_modules/mdb-ui-kit/src/scss/free/mixins/_table-variants.scss
 reactjs/package.json
+reactjs/package.json
+reactjs/package-lock.json
