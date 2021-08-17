@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 let Transaction = () => {
   let [balance, setBalance] = useState(0);
   let [value, setValue] = useState(Number);
@@ -11,25 +10,24 @@ let Transaction = () => {
   }
 
   let addValue = () => {
-    setBalance(balance + value);
+    setBalance((value>=0 || value!==isNaN)?(balance + value):(alert("Please Entered Amount")));
     setTransaction(
-      (value !== 0) ? [new Date().toLocaleTimeString() + "   :    " + value + "    :-   Added", ...Transaction]
+      (value !== 0 || value!==isNaN ) ? [new Date().toLocaleString() + "   :    " + value + "    :-   Added", ...Transaction]
         : (alert("Invalid Amount Entered"), [...Transaction])
 
     )
   };
 
   let removeValue = () => {
-    (balance < value) ? alert('CurrentBalance is Low') :
-    (setBalance(balance - value));
-
-      setTransaction((value !==0 && balance!==0)?[new Date().toLocaleTimeString() + "    :    " + value + "    :-     removed", ...Transaction]
-        : (alert("Invalid Amount Entered"), [...Transaction]))
+    (balance < value || value===isNaN) ? alert('CurrentBalance is Low') :
+    (setBalance(balance - value)) 
+    ( setTransaction((value !==0 || balance!==0)?[new Date().toLocaleString() + "    :    " + value + "    :-     removed", ...Transaction]
+        : (alert("Invalid Amount Entered"), [...Transaction])))
         
   };
   return (
     <div>
-      <pre>{JSON.stringify(balance)}</pre>
+      <pre>{JSON.stringify(Transaction)}</pre>
       <div className="container  md-12  align-items-center">
         <div className="row">
           <div className="col-md-5">
@@ -40,7 +38,7 @@ let Transaction = () => {
                   <div className="card">
                     <div className="card-header">Balance:  {balance}</div>
                     <div className="card-body">
-                      <input type="number" placeholder="Enter Amount" onChange={onChangeHandler} />
+                      <input type="number" placeholder="Enter Amount" onChange={onChangeHandler} required />
                       <br />
                       <br />
                       <button type="button" className="btn btn-success mr-2 btn-sm" onClick={addValue}><h3>Add</h3></button>
@@ -52,7 +50,7 @@ let Transaction = () => {
           </div>
           <div className="container md-6 mt-4  margin-left: auto margin-right: auto">
             <div className="row">
-              <div className="col-md-4">
+              <div className="col-md-5">
                 <div className="card">
                   <div className="card-header">Transaction:</div>
                   <div className="card-body" >
