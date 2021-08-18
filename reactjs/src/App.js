@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./Hooks/Component/about.jsx";
 import Navbar from "./Hooks/NavBar/Navbar.jsx";
-import ContactApp from "./Hooks/ContactApp/contactapp.jsx";
+import ContactApp from "./Hooks/ContactApp/Class/Contactapp.jsx";
 import DigitalClock from "./Hooks/DigitalClock/DigitalClock.jsx";
 import Message from "./Message/message.jsx"
 import Transaction from "./MiniProject/Transaction/Transaction.jsx"

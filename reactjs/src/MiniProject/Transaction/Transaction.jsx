@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 let Transaction = () => {
   let [balance, setBalance] = useState(0);
   let [value, setValue] = useState(Number);
@@ -10,18 +11,18 @@ let Transaction = () => {
   }
 
   let addValue = () => {
-    setBalance((value>=0 || value!==isNaN)?(balance + value):(alert("Please Entered Amount")));
+    setBalance((value>=0 && value!==null)?(balance + value):(alert("Please Entered Amount")));
     setTransaction(
-      (value !== 0 || value!==isNaN ) ? [new Date().toLocaleString() + "   :    " + value + "    :-   Added", ...Transaction]
+      (value !== 0 && value!==null ) ? [new Date().toLocaleString() + "   :    " + value + "    :-   Added", ...Transaction]
         : (alert("Invalid Amount Entered"), [...Transaction])
 
     )
   };
 
   let removeValue = () => {
-    (balance < value || value===isNaN) ? alert('CurrentBalance is Low') :
+    (balance < value && value===null) ? alert('CurrentBalance is Low') :
     (setBalance(balance - value)) 
-    ( setTransaction((value !==0 || balance!==0)?[new Date().toLocaleString() + "    :    " + value + "    :-     removed", ...Transaction]
+    ( setTransaction((value !==0 && balance!==0)?[new Date().toLocaleString() + "    :    " + value + "    :-     removed", ...Transaction]
         : (alert("Invalid Amount Entered"), [...Transaction])))
         
   };
