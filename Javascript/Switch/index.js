@@ -1,6 +1,9 @@
 let day="Thusday || Tuesday";
+
 switch (day){
+
     case("Monday"):
+    debugger;
     console.log("Today is Monday");
     break;
     case("Tuesday"):
@@ -19,4 +22,4 @@ switch (day){
     console.log("Today is Saturday");
     default:
     console.log("Today is Sunday");
-}
+};

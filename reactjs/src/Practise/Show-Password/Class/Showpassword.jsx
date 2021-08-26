@@ -8,7 +8,7 @@ class ShowPassword extends Component {
       this.setState({inputType:'text'})
     :
       this.setState({inputType:'password'})
-console.log(this.state.inputType)    
+// console.log(this.state.inputType)    
     };
   render() {  
     return (

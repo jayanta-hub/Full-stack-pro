@@ -1,29 +1,31 @@
 import React, { useState } from 'react'
-
 let Transaction = () => {
   let [balance, setBalance] = useState(0);
   let [value, setValue] = useState(Number);
   let [Transaction, setTransaction] = useState([]);
 
-  let onChangeHandler = (event) => {
+  let onChangeHandler = (event) => {isNaN(event.target.valueAsNumber)?setValue(0):
     setValue(event.target.valueAsNumber)
     event.preventDefault();
   }
-
+  
   let addValue = () => {
-    setBalance((value>=0 && value!==null)?(balance + value):(alert("Please Entered Amount")));
+     (value===0) || (value===null)?alert("Invalid Amount Entered"):
+    setBalance(balance + value);
+    (value!==0)?
     setTransaction(
-      (value !== 0 && value!==null ) ? [new Date().toLocaleString() + "   :    " + value + "    :-   Added", ...Transaction]
-        : (alert("Invalid Amount Entered"), [...Transaction])
-
-    )
+      [`${new Date().toLocaleString()} : ${value} :-   Added`, ...Transaction]
+        
+    ):alert("Invalid Amount Entered.....")
   };
 
   let removeValue = () => {
-    (balance < value && value===null) ? alert('CurrentBalance is Low') :
-    (setBalance(balance - value)) 
-    ( setTransaction((value !==0 && balance!==0)?[new Date().toLocaleString() + "    :    " + value + "    :-     removed", ...Transaction]
-        : (alert("Invalid Amount Entered"), [...Transaction])))
+
+    (balance < value)  ? alert('CurrentBalance is Low') :
+  setBalance(balance - value);
+  ((value ===0) || (balance===0))?alert('CurrentBalance is Low') :
+     setTransaction([`${new Date().toLocaleString()} : ${value} :-   Removed`, ...Transaction])
+     
         
   };
   return (

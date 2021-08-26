@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 const Showpassword = () => {
   let [inputType,setInputType]=useState('password')
   let changeHanlder=(event)=>{
-    // console.log(event.target.checked);
     (event.target.checked === true )?
     setInputType(inputType='text')
   :
@@ -30,6 +29,7 @@ const Showpassword = () => {
                         aria-label="Checkbox for following text input"
                         onChange={changeHanlder}
                       />
+                      
                     </div>
                   </div>
                   <input
