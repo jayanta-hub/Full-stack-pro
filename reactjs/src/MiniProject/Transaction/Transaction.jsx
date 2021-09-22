@@ -21,10 +21,8 @@ let Transaction = () => {
 
   let removeValue = () => {
 
-    (balance < value)  ? alert('CurrentBalance is Low') :
-  setBalance(balance - value);
-  ((value ===0) || (balance===0))?alert('CurrentBalance is Low') :
-     setTransaction([`${new Date().toLocaleString()} : ${value} :-   Removed`, ...Transaction])
+    (balance < value) || (value ===0) || (balance===0)  ? (balance < value)?alert('Please Enter Valid Amount'):alert('CurrentBalance is Low') :
+  (setBalance(balance - value) (setTransaction([`${new Date().toLocaleString()} : ${value} :-   Removed`, ...Transaction])))
      
         
   };
