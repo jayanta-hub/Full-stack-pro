@@ -112,6 +112,7 @@
 
 let curTime = new Date();
 
+console.log(new Date().toLocaleString());
 // console.log(curTime.setTime());
 // console.log(curTime.setHours(5));
 // console.log(curTime.setMinutes(5));
