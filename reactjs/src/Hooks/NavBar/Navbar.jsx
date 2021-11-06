@@ -17,24 +17,24 @@ class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <Link to="/about" className="nav-link">
-                 About
+                  About
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/contact" className="nav-link">
-               Contact
+                  Contact
                 </Link>
               </li>
               <li className="nav-item">
-              <Link to="/message" className="nav-link">
-             Message
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/react-useref-hook" className="nav-link">
-              react-useref-hook
-              </Link>
-            </li>
+                <Link to="/message" className="nav-link">
+                  Message
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/react-useref-hook" className="nav-link">
+                  react-useref-hook
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>

@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 let DigitalClock = () => {
   let [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
   useEffect(() => {
-    console.log("Birth");
     let timer = setInterval(() => {
       setCurrentTime(new Date().toLocaleTimeString());
     }, 1000);
     return () => {
-      console.log("Deatch - remove the comp form dom");
       clearInterval(timer);
     };
   }, []);

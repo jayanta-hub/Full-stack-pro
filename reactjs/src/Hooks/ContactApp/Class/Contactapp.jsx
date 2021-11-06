@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
 // import ContactCard from "../ContactCard/ContactCard";
-import Edit from "../Edit"
-import { TiEdit } from 'react-icons/ti';
-
+import Edit from "../Edit";
+import { TiEdit } from "react-icons/ti";
 
 class ContactApp extends Component {
   constructor(props) {
@@ -24,22 +23,17 @@ class ContactApp extends Component {
           contacts: response.data,
         });
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   }
   getContactData = (contact) => {
     this.setState({
-      selectedContact: contact, 
-    })
-this.setState({editContact:!false})
-;
-
+      selectedContact: contact,
+    });
+    this.setState({ editContact: !false });
   };
-  editHandler=(arr)=>{
-this.setState({editContact:!false})
-this.setState({selectedDetails:arr})
-console.log(this.state.selectedDetails)
+  editHandler = (arr) => {
+    this.setState({ editContact: !false });
+    this.setState({ selectedDetails: arr });
   };
   render() {
     return (
@@ -59,46 +53,37 @@ console.log(this.state.selectedDetails)
                 <tbody>
                   {this.state.contacts.length > 0 ? (
                     <React.Fragment>
-                      {this.state.contacts.map((contact,index,arr) => {
-                        return (
-                          (index<=5)?
-                          (<tr
+                      {this.state.contacts.map((contact, index, arr) => {
+                        return index <= 5 ? (
+                          <tr
                             key={contact.email}
                             onClick={this.getContactData.bind(this, contact)}
-                            
                           >
-                            <td><img src={contact.picture.thumbnail} alt="Test" /></td>
+                            <td>
+                              <img src={contact.picture.thumbnail} alt="Test" />
+                            </td>
                             <td>{contact.name.first}</td>
                             <td>{contact.email}</td>
                             <td>{contact.location.city}</td>
-                            <td><TiEdit onClick={this.editHandler.bind()}/></td>
-                          </tr>):null
-                        
-                        );
-                      }
-                      )
-                    }
+                            <td>
+                              <TiEdit onClick={this.editHandler.bind()} />
+                            </td>
+                          </tr>
+                        ) : null;
+                      })}
                     </React.Fragment>
                   ) : null}
                 </tbody>
               </table>
             </div>
-        
+
             <div className="col-md-4">
-            {(this.state.editContact)?<Edit contact={this.state.selectedContact}/>
-            // :(Object.keys(this.state.selectedContact).length > 0 ? (
-            //   <>
-            //     <ContactCard contact={this.state.selectedContact} />
-            //   </>
-            // ) : null
-            // )
-          :null
-        }
-            </div >
-           
+              {this.state.editContact ? (
+                <Edit contact={this.state.selectedContact} />
+              ) : null}
+            </div>
           </div>
         </div>
-        {/*  <pre>{JSON.stringify(this.state.selectedContact)}</pre> */}
       </React.Fragment>
     );
   }

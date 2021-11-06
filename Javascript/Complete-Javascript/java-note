@@ -444,11 +444,11 @@
 // we have total 5 falsy values in javascript
 // 👉 0,"",undefined,null,NaN,false** is false anyway
 
-// if(score = 5){
-//   console.log("OMG, we loss the game 😭");
-// }else{
-//   console.log("Yay, We won the game 😀");
-// }
+if(null){
+  console.log("Yay, We won the game 😀");
+}else{
+  console.log("OMG, we loss the game 😭");
+}
 
 
 
@@ -1547,7 +1547,7 @@
 
 // 👉 Finding a String in a String
 
-// String.prototype.indexOf(searchValue [, fromIndex]) 🙋‍♂️
+// String.prototype.indexOf(searchValue [ fromIndex]) 🙋‍♂️
 
 // The indexOf() method returns the index of (the position of) the first
 //  occurrence of a specified text in a string
