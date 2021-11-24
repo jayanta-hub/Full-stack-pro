@@ -8,14 +8,13 @@ let Transaction = () => {
     isNaN(event.target.valueAsNumber)
       ? setValue(0)
       : setValue(event.target.valueAsNumber);
-    event.preventDefault();
   };
 
-  let addValue = () => {
-    value === 0 || value === null
+  let addValueHandler = () => {
+    value === 0 && value === null
       ? alert("Invalid Amount Entered")
       : setBalance(balance + value);
-    value !== 0
+    value !== 0 && value !== null
       ? setTransaction([
           `${new Date().toLocaleString()} : ${value} :-   Added`,
           ...Transaction,
@@ -23,17 +22,19 @@ let Transaction = () => {
       : alert("Invalid Amount Entered.....");
   };
 
-  let removeValue = () => {
-    balance < value || value === 0 || balance === 0
-      ? balance < value
+  let removeValueHandler = () => {
+    value > balance || value === 0 || balance === 0
+      ? balance > value || value === 0
         ? alert("Please Enter Valid Amount")
         : alert("CurrentBalance is Low")
-      : setBalance(balance - value)(
-          setTransaction([
-            `${new Date().toLocaleString()} : ${value} :-   Removed`,
-            ...Transaction,
-          ])
-        );
+      : setBalance(balance - value);
+
+    if (value !== 0 && value < balance && value !== null) {
+      setTransaction([
+        `${new Date().toLocaleString()} : ${value} :-   Removed`,
+        ...Transaction,
+      ]);
+    }
   };
   return (
     <div>
@@ -47,27 +48,30 @@ let Transaction = () => {
               <div className="row">
                 <div className="col-md-8">
                   <div className="card">
-                    <div className="card-header">Balance: {balance}</div>
+                    <div className="card-header">
+                      Current Balance: {balance}
+                    </div>
                     <div className="card-body">
                       <input
+                        id="value"
+                        name="value"
                         type="number"
                         placeholder="Enter Amount"
                         onChange={onChangeHandler}
-                        required
                       />
                       <br />
                       <br />
                       <button
                         type="button"
                         className="btn btn-success mr-2 btn-sm"
-                        onClick={addValue}
+                        onClick={addValueHandler}
                       >
                         <h3>Add</h3>
                       </button>
                       <button
                         type="button"
                         className="btn btn-primary btn-sm"
-                        onClick={removeValue}
+                        onClick={removeValueHandler}
                       >
                         <h3>Remove</h3>
                       </button>

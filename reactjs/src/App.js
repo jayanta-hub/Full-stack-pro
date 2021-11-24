@@ -4,20 +4,22 @@ import About from "./Hooks/Component/about.jsx";
 import Navbar from "./Hooks/NavBar/Navbar.jsx";
 import ContactApp from "./Hooks/ContactApp/Class/Contactapp.jsx";
 import DigitalClock from "./Hooks/DigitalClock/DigitalClock.jsx";
-import Message from "./Message/message.jsx"
+import Message from "./Message/message.jsx";
+import EmplyeeFunc from './Render/EmplyeeFunc';
 // import Event2 from "./Practise/Binding/function/Event2.jsx"
 // import Showpassword from "./Practise/Show-Password/Function/Showpassword.jsx";
 // import Form from "./Practise/Show-pass/Show.jsx"
-import hook from "./Hooks/react-useref-hook/hook.jsx"
+import hook from "./Hooks/react-useref-hook/hook.jsx";
 import { Provider } from "react-redux";
 import { store } from "./Redux/Store";
-import Transaction from "./MiniProject/Transaction/Transaction.jsx"
+import Transaction from "./MiniProject/Transaction/Transaction.jsx";
 let App = () => {
   return (
     <>
     <Provider store={store}>
       <Router>  
         <Navbar />
+        <EmplyeeFunc />
         <Switch>
           <Route exact path="/digital" component={DigitalClock} />
           <Route exact path="/about" component={About} />
@@ -26,7 +28,7 @@ let App = () => {
           <Route exact path="/hook" component={hook} />
         </Switch>
       </Router>
-      <Transaction/>
+      {/* <Transaction/> */}
       </Provider>
     </>
   );

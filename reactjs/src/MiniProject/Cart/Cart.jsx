@@ -14,6 +14,7 @@ class Cart extends React.Component {
 
     Axios.get(dataURL)
       .then((response) => {
+        console.log("data",response.data)
         this.setState({
           menu: response.data,
         });
@@ -24,10 +25,12 @@ class Cart extends React.Component {
         });
         console.log(err);
       });
+      console.log(this.state.menu)
   }
   render() {
     return (
         <React.Fragment>
+        <pre>{JSON.stringify(this.state.menu)}</pre>
         <div className="container mt-4">
           <div className="row">
             <div className="col-md-8">

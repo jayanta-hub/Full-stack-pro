@@ -1,6 +1,7 @@
 const add = (a) => {
-//   console.log(a);
+return a;
 };
 add(4);
-let x=add("the");
-console.log(x)
+// let x=add("the");
+// console.log(x)
+console.log(typeof(add(4)))

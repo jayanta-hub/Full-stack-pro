@@ -46,9 +46,6 @@ class Balance extends React.Component {
                     <div className="col-md-6">
                         <div ><h1 >Account Statement - Basic</h1></div>
                         <div className="container ml-5 md-6  bg-success">
-                            <pre>
-                                {JSON.stringify(this.state.arr)}
-                            </pre>
                             <div className="row">
                                 <div className="col-md-8 ml-5 mt-2 mb-4">
                                     <div className="card">

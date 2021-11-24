@@ -19,6 +19,7 @@ class ContactApp extends Component {
       "https://gist.githubusercontent.com/narasimhareddyprostack/7e344f346f47bc53a889d78b5258d0c9/raw/56d531cb936d9c79e2417e5d0e5d8c9c876800f2/contactlist";
     Axios.get(dataUrl)
       .then((response) => {
+        console.log("data",response.data)
         this.setState({
           contacts: response.data,
         });
@@ -57,7 +58,7 @@ class ContactApp extends Component {
                         return index <= 5 ? (
                           <tr
                             key={contact.email}
-                            onClick={this.getContactData.bind(this, contact)}
+                            onMouseOver={this.getContactData.bind(this, contact)}
                           >
                             <td>
                               <img src={contact.picture.thumbnail} alt="Test" />

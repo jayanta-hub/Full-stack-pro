@@ -1,21 +1,17 @@
-import React, { Component } from "react";
+import React,{useState} from 'react'
 import EmployeeData from "../assets/EmploeeData/EmployeeData";
-class Employee extends Component {
-  //initilize component data
-  constructor(props) {
-    super(props);
-    this.state = {
-      employees: EmployeeData,
-      
-    };
-  };  
-  updateHander =(emplyee)=>{
-      console.log(emplyee)
-  }
-  render() {
-    // let { employees } = this.state.employees;
+
+
+const EmplyeeFunc = () => {
+    const [emplyee,setEmplyee]=useState(EmployeeData);
+    const [selected,setSelected]=useState({});
+    const updateHander=(employee)=>{
+        setSelected(employee)
+        console.log(selected)
+    }
+
     return (
-      <React.Fragment>
+        <React.Fragment>
         {/*  <pre>{JSON.stringify(this.state.employees[0])}</pre> */}
         <div className="container mt-4">
           <div className="row">
@@ -32,9 +28,9 @@ class Employee extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.employees.map((employee) => {
+                  {emplyee.map((employee) => {
                     return (
-                      <tr key={employee.email} onMouseOver={this.updateHander.bind(this,employee)}>
+                      <tr key={employee.email} onClick={()=>updateHander(employee)}>
                         <td>{employee.login.uuid.substring(32, 36)} </td>
                         <td>
                           <img src={employee.picture.thumbnail} alt="" />
@@ -48,12 +44,12 @@ class Employee extends Component {
                   })}
                 </tbody>
               </table>
+              <h1>{selected.id.value}</h1>
             </div>
           </div>
         </div>
       </React.Fragment>
-    );
-  }
+    )
 }
 
-export default Employee;
+export default EmplyeeFunc
